@@ -1,0 +1,86 @@
+{
+  "count": 12,
+  "next": "http://testserver/questions?page=2",
+  "previous": null,
+  "results": [{
+    "id": 1,
+    "title": "question-0",
+    "description": "question-0",
+    "answers": [{
+      "user": 1,
+      "question": 1,
+      "content": "answer-0",
+      "votes": 0
+    }, {
+      "user": 2,
+      "question": 1,
+      "content": "answer-1",
+      "votes": 1
+    }, {
+      "user": 3,
+      "question": 1,
+      "content": "answer-2",
+      "votes": 2
+    }]
+  }, {
+    "id": 2,
+    "title": "question-1",
+    "description": "question-1",
+    "answers": [{
+      "user": 1,
+      "question": 2,
+      "content": "answer-0",
+      "votes": 0
+    }, {
+      "user": 2,
+      "question": 2,
+      "content": "answer-1",
+      "votes": 1
+    }, {
+      "user": 3,
+      "question": 2,
+      "content": "answer-2",
+      "votes": 2
+    }]
+  }, {
+    "id": 3,
+    "title": "question-2",
+    "description": "question-2",
+    "answers": [{
+      "user": 1,
+      "question": 3,
+      "content": "answer-0",
+      "votes": 0
+    }, {
+      "user": 2,
+      "question": 3,
+      "content": "answer-1",
+      "votes": 1
+    }, {
+      "user": 3,
+      "question": 3,
+      "content": "answer-2",
+      "votes": 2
+    }]
+  }, {
+    "id": 4,
+    "title": "question-3",
+    "description": "question-3",
+    "answers": [{
+      "user": 1,
+      "question": 4,
+      "content": "answer-0",
+      "votes": 0
+    }, {
+      "user": 2,
+      "question": 4,
+      "content": "answer-1",
+      "votes": 1
+    }, {
+      "user": 3,
+      "question": 4,
+      "content": "answer-2",
+      "votes": 2
+    }]
+  }]
+}

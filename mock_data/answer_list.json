@@ -1,0 +1,21 @@
+{
+  "count": 3,
+  "next": null,
+  "previous": null,
+  "results": [{
+    "user": 1,
+    "question": "http://testserver/questions/1",
+    "content": "answer-0",
+    "votes": 0
+  }, {
+    "user": 2,
+    "question": "http://testserver/questions/1",
+    "content": "answer-1",
+    "votes": 1
+  }, {
+    "user": 3,
+    "question": "http://testserver/questions/1",
+    "content": "answer-2",
+    "votes": 2
+  }]
+}
