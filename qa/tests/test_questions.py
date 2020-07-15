@@ -49,6 +49,8 @@ class QuestionListGetTest(TestCase):
         for i, page in zip(range(1, 4), pages):
             with open(f'{MOCK_DATA_DIR}/questions_page_{i}.json', 'r') as f:
                 content = f.read()
+
+        # indentation of below code required
         expected_output = json.loads(content)
         self.assertEqual(page.json(), expected_output)
 

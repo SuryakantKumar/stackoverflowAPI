@@ -37,10 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_extensions',
-    'rest_framework',
+
+    'rest_framework',       # django rest framework
+    'qa.apps.QaConfig',     # qa app
     'taggit',
-    'qa.apps.QaConfig',
+    'django_extensions',
 ]
 
 MIDDLEWARE = [
@@ -130,4 +131,3 @@ REST_FRAMEWORK = {
 }
 
 TEST_RUNNER = 'django.test.runner.DiscoverRunner'
-

@@ -7,11 +7,8 @@ from taggit.managers import TaggableManager
 class Question(models.Model):
     title = models.CharField(max_length=1000, unique=True)
     description = models.TextField()
-    user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE
-    )
-
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+                             on_delete=models.CASCADE)
     tags = TaggableManager()
 
     def __str__(self):
@@ -22,11 +19,10 @@ class Question(models.Model):
 
 
 class Answer(models.Model):
-    user = models.ForeignKey(
-        settings.AUTH_USER_MODEL,
-        on_delete=models.CASCADE
-    )
-    question = models.ForeignKey(Question, on_delete=models.CASCADE, related_name='answers')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL,
+                             on_delete=models.CASCADE)
+    question = models.ForeignKey(Question, on_delete=models.CASCADE,
+                                 related_name='answers')
     content = models.TextField()
     votes = models.IntegerField(default=0)
 

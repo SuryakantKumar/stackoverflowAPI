@@ -46,4 +46,3 @@ class AnswerListGetTest(TestCase):
             expected_content = f.read()
         expected_content = json.loads(expected_content)
         self.assertEqual(response.json(), expected_content)
-
