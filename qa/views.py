@@ -50,3 +50,21 @@ def questions_detail(request, pk):
     elif request.method == 'DELETE':
         questions.delete()
         return JsonResponse({'message': 'Question was deleted successfully'}, status=status.HTTP_204_NO_CONTENT)
+
+
+@api_view(['GET', 'POST'])
+def answers_list(request, pk):
+    if request.method == 'GET':
+        answers = Answer.objects.filter(question__pk=pk)
+
+        answers_serializer = AnswerSerializer(answers, many=True)
+        return JsonResponse(answers_serializer.data, safe=False)
+
+    elif request.method == 'POST':
+        answers_data = JSONParser().parse(request)
+        answers_serializer = AnswerSerializer(data=answers_data)
+
+        if answers_serializer.is_valid():
+            answers_serializer.save()
+            return JsonResponse(answers_serializer.data, status=status.HTTP_201_CREATED)
+        return JsonResponse(answers_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
