@@ -1,4 +1,4 @@
-Django==2.2
+Django==2.2.18
 django-extensions==2.1.6
 django-taggit==1.1.0
 django-test-plus==1.1.1
